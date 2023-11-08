@@ -1,10 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://b64w4g0aoju2k"]
+[gd_scene load_steps=3 format=3 uid="uid://b64w4g0aoju2k"]
+
+[ext_resource type="Texture2D" uid="uid://nmb1do3umfyu" path="res://assets/zebiniPlayerAssets/player/adventurer-v1.5-Sheet.png" id="1_ljbx7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dwkp"]
 
 [node name="player" type="CharacterBody2D"]
 
 [node name="spriteSheet" type="Sprite2D" parent="."]
+texture = ExtResource("1_ljbx7")
+hframes = 7
+vframes = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_1dwkp")
