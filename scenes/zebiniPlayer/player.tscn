@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b64w4g0aoju2k"]
+[gd_scene load_steps=4 format=3 uid="uid://b64w4g0aoju2k"]
 
+[ext_resource type="Script" path="res://scenes/zebiniPlayer/player.gd" id="1_1rdo0"]
 [ext_resource type="Texture2D" uid="uid://nmb1do3umfyu" path="res://assets/zebiniPlayerAssets/player/adventurer-v1.5-Sheet.png" id="1_ljbx7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1dwkp"]
 radius = 7.0
 
 [node name="player" type="CharacterBody2D"]
+script = ExtResource("1_1rdo0")
 
 [node name="spriteSheet" type="Sprite2D" parent="."]
 texture = ExtResource("1_ljbx7")
