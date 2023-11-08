@@ -6,16 +6,18 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_duenn"]
 size = Vector2(853, 62)
 
-[node name="Node2D" type="StaticBody2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(4, 142)
-scale = Vector2(6.70312, 2.08594)
-texture = ExtResource("1_vxqs6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(9, 40)
-shape = SubResource("RectangleShape2D_duenn")
+[node name="Node2D" type="Node"]
 
 [node name="player" parent="." instance=ExtResource("2_f75eg")]
 position = Vector2(-32, -32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(610, 368)
+shape = SubResource("RectangleShape2D_duenn")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(609, 466)
+scale = Vector2(6.70312, 2.08594)
+texture = ExtResource("1_vxqs6")
