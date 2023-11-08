@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0cfrj5xipjy1"]
+[gd_scene load_steps=4 format=3 uid="uid://c0cfrj5xipjy1"]
 
 [ext_resource type="Texture2D" uid="uid://db4mvsfaca566" path="res://icon.svg" id="1_vxqs6"]
+[ext_resource type="PackedScene" uid="uid://b64w4g0aoju2k" path="res://scenes/zebiniPlayer/player.tscn" id="2_f75eg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_duenn"]
 size = Vector2(853, 62)
@@ -15,3 +16,6 @@ texture = ExtResource("1_vxqs6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(9, 40)
 shape = SubResource("RectangleShape2D_duenn")
+
+[node name="player" parent="." instance=ExtResource("2_f75eg")]
+position = Vector2(-32, -32)
